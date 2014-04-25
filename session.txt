@@ -1,0 +1,783 @@
+Last login: Tue Apr 22 15:28:16 on ttys005
+vl64h169:~ david$ cd Drop
+vl64h169:~ david$ cd Dropbox/
+vl64h169:~ david$ mkdir reunion_grupo
+vl64h169:~ david$ cd reunion_grupo/
+vl64h169:reunion_grupo david$ pwd
+/Users/david/reunion_grupo
+vl64h169:reunion_grupo david$ open
+vl64h169:reunion_grupo david$ touch reunion.py
+vl64h169:reunion_grupo david$ open reunion.py
+vl64h169:reunion_grupo david$ ls
+reunion.py
+vl64h169:reunion_grupo david$ git init
+vl64h169:reunion_grupo david$ ls
+reunion.py
+vl64h169:reunion_grupo david$ ls -a
+./          ../         reunion.py
+vl64h169:reunion_grupo david$ git init
+Initialized empty Git repository in /Users/david/reunion_grupo/.git/
+vl64h169:reunion_grupo david$ ls -a
+./          ../         .git/       reunion.py
+vl64h169:reunion_grupo david$ cd .git/
+vl64h169:.git david$ ls
+HEAD         config       hooks/       objects/
+branches/    description  info/        refs/
+vl64h169:.git david$ cd ..
+
+vl64h169:reunion_grupo david$ ls
+reunion.py
+vl64h169:reunion_grupo david$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	reunion.py
+nothing added to commit but untracked files present (use "git add" to track)
+vl64h169:reunion_grupo david$ git add reunion.py
+vl64h169:reunion_grupo david$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   reunion.py
+#
+vl64h169:reunion_grupo david$ git commit
+Aborting commit due to empty commit message.
+vl64h169:reunion_grupo david$ git commit -m "Checkin inicial: reunion.py"
+[master (root-commit) ea7ccab] Checkin inicial: reunion.py
+ 1 file changed, 1 insertion(+)
+ create mode 100644 reunion.py
+vl64h169:reunion_grupo david$ git log
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ open reunion.py
+vl64h169:reunion_grupo david$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   reunion.py
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+vl64h169:reunion_grupo david$ git add reunion.py; git commit -m "Agregue informacion a reunion.py"
+vl64h169:reunion_grupo david$ git commit -m "Agregue informacion a reunion.py"
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   reunion.py
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+vl64h169:reunion_grupo david$ git commit -am "Agregue informacion a reunion.py"
+vl64h169:reunion_grupo david$ git commit -am "Agregue informacion a reunion.py"
+vl64h169:reunion_grupo david$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   reunion.py
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	otro.py
+no changes added to commit (use "git add" and/or "git commit -a")
+vl64h169:reunion_grupo david$ git add otro.py
+vl64h169:reunion_grupo david$ git commit -am "Agregue informacion a reunion.py y agregue otro.py"
+[master 341c6c1] Agregue informacion a reunion.py y agregue otro.py
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 otro.py
+vl64h169:reunion_grupo david$ git log
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:08:35 2014 -0500
+
+    Agregue informacion a reunion.py y agregue otro.py
+
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ git stuats
+git: 'stuats' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+vl64h169:reunion_grupo david$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   otro.py
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+vl64h169:reunion_grupo david$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   otro.py
+#	modified:   reunion.py
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+vl64h169:reunion_grupo david$ git commit -am "
+vl64h169:reunion_grupo david$ git commit -am "Modifique los 2"
+[master 939edd0] Modifique los 2
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+vl64h169:reunion_grupo david$ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+vl64h169:reunion_grupo david$ goti stua
+vl64h169:reunion_grupo david$ git status
+# On branch master
+nothing to commit, working directory clean
+vl64h169:reunion_grupo david$ git log
+commit 939edd0f2f65f52c0fd954d6e1e6c93ab2b0b431
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:09:51 2014 -0500
+
+    Modifique los 2
+
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:08:35 2014 -0500
+
+    Agregue informacion a reunion.py y agregue otro.py
+
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ ls
+otro.py     reunion.py
+vl64h169:reunion_grupo david$ cat reunion.py
+print "Hola a todos"
+
+print "Mas cosas"
+
+vl64h169:reunion_grupo david$ open reunion.py
+vl64h169:reunion_grupo david$ cat reunion.py
+print "Hola a todos"
+
+print "Mas cosas"
+
+print "Aun mas"vl64h169:reunion_grupo david$ git status
+# On branch master
+nothing to commit, working directory clean
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$ ls
+otro.py     reunion.py
+vl64h169:reunion_grupo david$ git log
+commit 939edd0f2f65f52c0fd954d6e1e6c93ab2b0b431
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:09:51 2014 -0500
+
+    Modifique los 2
+
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:08:35 2014 -0500
+
+    Agregue informacion a reunion.py y agregue otro.py
+
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ gir
+vl64h169:reunion_grupo david$ cat reunion.py
+print "Hola a todos"
+
+print "Mas cosas"
+
+print "Aun mas"vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$ git checkout ea7ccab
+Note: checking out 'ea7ccab'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at ea7ccab... Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ ls
+reunion.py
+vl64h169:reunion_grupo david$ cat reunion.py
+print "Hola a todos"vl64h169:reunion_grupo david$ git log
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ git checkout
+vl64h169:reunion_grupo david$ git checkout HEAD
+vl64h169:reunion_grupo david$ git log
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ git checkout 939edd0f
+Previous HEAD position was ea7ccab... Checkin inicial: reunion.py
+HEAD is now at 939edd0... Modifique los 2
+vl64h169:reunion_grupo david$ git log
+commit 939edd0f2f65f52c0fd954d6e1e6c93ab2b0b431
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:09:51 2014 -0500
+
+    Modifique los 2
+
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:08:35 2014 -0500
+
+    Agregue informacion a reunion.py y agregue otro.py
+
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ cat otro.py
+print "Nuevo"
+
+print "ModificadO"vl64h169:reunion_grupo david$ git checkout 341c6c1 otro.py
+vl64h169:reunion_grupo david$ cat otro.py
+print "Nuevo"vl64h169:reunion_grupo david$ cat reunion.py
+print "Hola a todos"
+
+print "Mas cosas"
+
+print "Aun mas"vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$ git diff
+vl64h169:reunion_grupo david$ git diff
+diff --git a/reunion.py b/reunion.py
+index 92ae773..91e0569 100644
+--- a/reunion.py
++++ b/reunion.py
+@@ -2,4 +2,7 @@ print "Hola a todos"
+
+ print "Mas cosas"
+
+-print "Aun mas"
+\ No newline at end of file
++print "Agregue"
++
++print "Aun mas"
++
+vl64h169:reunion_grupo david$ opendiff
+2014-04-25 11:20:15.424 opendiff[39344:1007] too few arguments
+2014-04-25 11:20:15.431 opendiff[39344:1007] usage: opendiff file1 file2 [-ancestor ancestorFile] [-merge mergeFile]
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$
+vl64h169:reunion_grupo david$ git branch
+* (detached from 939edd0)
+  master
+vl64h169:reunion_grupo david$ git checkout master
+M	otro.py
+M	reunion.py
+Switched to branch 'master'
+vl64h169:reunion_grupo david$ git log
+commit 939edd0f2f65f52c0fd954d6e1e6c93ab2b0b431
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:09:51 2014 -0500
+
+    Modifique los 2
+
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:08:35 2014 -0500
+
+    Agregue informacion a reunion.py y agregue otro.py
+
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ git branch
+* master
+vl64h169:reunion_grupo david$ git branch clases
+vl64h169:reunion_grupo david$ git brach
+git: 'brach' is not a git command. See 'git --help'.
+
+Did you mean this?
+	branch
+vl64h169:reunion_grupo david$ git branch
+  clases
+* master
+vl64h169:reunion_grupo david$ git checkout clases
+M	otro.py
+M	reunion.py
+Switched to branch 'clases'
+vl64h169:reunion_grupo david$ git branch
+* clases
+  master
+vl64h169:reunion_grupo david$ git log
+commit 939edd0f2f65f52c0fd954d6e1e6c93ab2b0b431
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:09:51 2014 -0500
+
+    Modifique los 2
+
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:08:35 2014 -0500
+
+    Agregue informacion a reunion.py y agregue otro.py
+
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ git status
+# On branch clases
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   otro.py
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   reunion.py
+#
+vl64h169:reunion_grupo david$ git commit -am "Limpie"
+[clases 9cb5c9a] Limpie
+ 2 files changed, 5 insertions(+), 4 deletions(-)
+vl64h169:reunion_grupo david$ git status
+# On branch clases
+nothing to commit, working directory clean
+vl64h169:reunion_grupo david$ git branch
+* clases
+  master
+vl64h169:reunion_grupo david$ ls
+clases.py   otro.py     reunion.py
+vl64h169:reunion_grupo david$ git status
+# On branch clases
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	clases.py
+nothing added to commit but untracked files present (use "git add" to track)
+vl64h169:reunion_grupo david$ git add clases.py
+vl64h169:reunion_grupo david$ git commit -am "Agregue clases.py"
+[clases a9465bb] Agregue clases.py
+ 1 file changed, 1 insertion(+)
+ create mode 100644 clases.py
+vl64h169:reunion_grupo david$ git log
+commit a9465bba350f834c3345b1ec9abc202790e8f9d0
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:26:50 2014 -0500
+
+    Agregue clases.py
+
+commit 9cb5c9a025bd6a834a8066d3c0fc1fd17b8b4e5e
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:26:02 2014 -0500
+
+    Limpie
+
+commit 939edd0f2f65f52c0fd954d6e1e6c93ab2b0b431
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:09:51 2014 -0500
+
+    Modifique los 2
+
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:08:35 2014 -0500
+
+    Agregue informacion a reunion.py y agregue otro.py
+
+commit ea7ccab06677ea1a0593be7ffcc23fa0828403e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:03:44 2014 -0500
+
+    Checkin inicial: reunion.py
+vl64h169:reunion_grupo david$ git status
+# On branch clases
+nothing to commit, working directory clean
+vl64h169:reunion_grupo david$ git checkout master
+Switched to branch 'master'
+vl64h169:reunion_grupo david$ ls
+otro.py     reunion.py
+vl64h169:reunion_grupo david$ git checkout clases
+Switched to branch 'clases'
+vl64h169:reunion_grupo david$ ls
+clases.py   otro.py     reunion.py
+vl64h169:reunion_grupo david$ git branch nopusoatencion
+vl64h169:reunion_grupo david$ git branch
+* clases
+  master
+  nopusoatencion
+vl64h169:reunion_grupo david$ git checkout nopusoatencion
+Switched to branch 'nopusoatencion'
+vl64h169:reunion_grupo david$ git branch
+  clases
+  master
+* nopusoatencion
+vl64h169:reunion_grupo david$ git checkout -b queseyo
+Switched to a new branch 'queseyo'
+vl64h169:reunion_grupo david$ git branch
+  clases
+  master
+  nopusoatencion
+* queseyo
+vl64h169:reunion_grupo david$ git checkout master
+Switched to branch 'master'
+vl64h169:reunion_grupo david$ ls
+otro.py     reunion.py
+vl64h169:reunion_grupo david$ git merge clases
+Updating 939edd0..a9465bb
+Fast-forward
+ clases.py  | 1 +
+ otro.py    | 4 +---
+ reunion.py | 5 ++++-
+ 3 files changed, 6 insertions(+), 4 deletions(-)
+ create mode 100644 clases.py
+vl64h169:reunion_grupo david$ ls
+clases.py   otro.py     reunion.py
+vl64h169:reunion_grupo david$ git status
+# On branch master
+nothing to commit, working directory clean
+vl64h169:reunion_grupo david$ ls
+clases.py   otro.py     reunion.py
+vl64h169:reunion_grupo david$ git branch clases
+fatal: A branch named 'clases' already exists.
+vl64h169:reunion_grupo david$ git checkout clases
+Switched to branch 'clases'
+vl64h169:reunion_grupo david$ open clases.py
+vl64h169:reunion_grupo david$ git commit -am "Cambie de idioma"
+[clases 6c193cb] Cambie de idioma
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+vl64h169:reunion_grupo david$ git master
+git: 'master' is not a git command. See 'git --help'.
+vl64h169:reunion_grupo david$ git merge clases
+Already up-to-date.
+vl64h169:reunion_grupo david$ git checkout master
+Switched to branch 'master'
+vl64h169:reunion_grupo david$ git merge clase
+merge: clase - not something we can merge
+vl64h169:reunion_grupo david$ git merge clases
+Updating a9465bb..6c193cb
+Fast-forward
+ clases.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+vl64h169:reunion_grupo david$  open clases.py
+vl64h169:reunion_grupo david$ git checkout clases
+M	clases.py
+Switched to branch 'clases'
+vl64h169:reunion_grupo david$ open clases.py
+vl64h169:reunion_grupo david$ git checkout master
+M	clases.py
+Switched to branch 'master'
+vl64h169:reunion_grupo david$ git commit -am "Cambie clases:
+> "
+[master 7375874] Cambie clases:
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+vl64h169:reunion_grupo david$ git checkout clases
+Switched to branch 'clases'
+vl64h169:reunion_grupo david$ open clases.py
+vl64h169:reunion_grupo david$ git commit -am "Cambie clases"
+[clases 62415a3] Cambie clases
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+vl64h169:reunion_grupo david$ git status
+# On branch clases
+nothing to commit, working directory clean
+vl64h169:reunion_grupo david$ git log
+commit 62415a349e7dcb8b7cbab0e16e338ab87932d797
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:38:14 2014 -0500
+
+    Cambie clases
+
+commit 6c193cb1ff4b13a6e852ca7a0703bc453bebc43a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:36:31 2014 -0500
+
+    Cambie de idioma
+
+commit a9465bba350f834c3345b1ec9abc202790e8f9d0
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:26:50 2014 -0500
+
+    Agregue clases.py
+
+commit 9cb5c9a025bd6a834a8066d3c0fc1fd17b8b4e5e
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:26:02 2014 -0500
+
+    Limpie
+
+commit 939edd0f2f65f52c0fd954d6e1e6c93ab2b0b431
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:09:51 2014 -0500
+
+    Modifique los 2
+
+commit 341c6c16e78a830147f7d4c35d73b645fc620c7a
+vl64h169:reunion_grupo david$ git checkout master
+Switched to branch 'master'
+vl64h169:reunion_grupo david$ git merge clases
+Auto-merging clases.py
+CONFLICT (content): Merge conflict in clases.py
+Automatic merge failed; fix conflicts and then commit the result.
+vl64h169:reunion_grupo david$ open clases.py
+vl64h169:reunion_grupo david$ git add clases.py
+vl64h169:reunion_grupo david$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse ecmerge p4merge araxis bc3 codecompare emerge vimdiff
+No files need merging
+vl64h169:reunion_grupo david$ git status
+# On branch master
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	modified:   clases.py
+#
+vl64h169:reunion_grupo david$ git
+vl64h169:reunion_grupo david$ git commit -am "Termine el merge"
+[master 5326e9b] Termine el merge
+vl64h169:reunion_grupo david$ git remote add origin https://github.com/dpsanders/ReunionGrupo.git
+vl64h169:reunion_grupo david$ git push -u origin master
+vl64h169:reunion_grupo david$ git remote
+origin
+vl64h169:reunion_grupo david$ git remote -
+error: Unknown subcommand: -
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags|--no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | -d | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+vl64h169:reunion_grupo david$ git remote -v
+origin	https://github.com/dpsanders/ReunionGrupo.git (fetch)
+origin	https://github.com/dpsanders/ReunionGrupo.git (push)
+vl64h169:reunion_grupo david$ git push -u origin master
+Counting objects: 29, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (29/29), 2.68 KiB | 0 bytes/s, done.
+Total 29 (delta 1), reused 0 (delta 0)
+To https://github.com/dpsanders/ReunionGrupo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+vl64h169:reunion_grupo david$ git push -u origin clases
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/dpsanders/ReunionGrupo.git
+ * [new branch]      clases -> clases
+Branch clases set up to track remote branch clases from origin.
+vl64h169:reunion_grupo david$ open README.
+vl64h169:reunion_grupo david$ touch README.md
+vl64h169:reunion_grupo david$ open README.md
+vl64h169:reunion_grupo david$ subl README.md
+vl64h169:reunion_grupo david$ git add README.md
+vl64h169:reunion_grupo david$ git commit -am "Agregue README"
+[master c869289] Agregue README
+ 1 file changed, 9 insertions(+)
+ create mode 100644 README.md
+vl64h169:reunion_grupo david$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 452 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dpsanders/ReunionGrupo.git
+   5326e9b..c869289  master -> master
+vl64h169:reunion_grupo david$ cd ..
+vl64h169:~ david$ mkdir nueva_reunion_grupo
+vl64h169:~ david$ git clone
+vl64h169:~ david$ git clone https://github.com/computo-fc/ReunionGrupo.git
+Cloning into 'ReunionGrupo'...
+remote: Counting objects: 32, done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 32 (delta 2), reused 32 (delta 2)
+Unpacking objects: 100% (32/32), done.
+Checking connectivity... done
+vl64h169:~ david$ cd ReunionGrupo/
+vl64h169:ReunionGrupo david$ ls
+README.md   clases.py   otro.py     reunion.py
+vl64h169:ReunionGrupo david$ open README.md
+vl64h169:ReunionGrupo david$ subl README.md
+vl64h169:ReunionGrupo david$ git commit -am "Cambie README para mayor explicacion"
+[master 6c88ef5] Cambie README para mayor explicacion
+ 1 file changed, 2 insertions(+)
+vl64h169:ReunionGrupo david$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+remote: Permission to computo-fc/ReunionGrupo.git denied to dpsanders.
+fatal: unable to access 'https://github.com/computo-fc/ReunionGrupo.git/': The requested URL returned error: 403
+vl64h169:ReunionGrupo david$ git checkout -b docs
+Switched to a new branch 'docs'
+vl64h169:ReunionGrupo david$ open README.md
+vl64h169:ReunionGrupo david$ subl README.md
+vl64h169:ReunionGrupo david$ git commit -am "Mas docs"
+[docs 1dfaf18] Mas docs
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+vl64h169:ReunionGrupo david$ git push -u origin docs
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 848 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+To https://github.com/computo-fc/ReunionGrupo.git
+ * [new branch]      docs -> docs
+Branch docs set up to track remote branch docs from origin.
+vl64h169:ReunionGrupo david$ cd ../re
+-bash: cd: ../re: No such file or directory
+vl64h169:ReunionGrupo david$ cd ../reunion_grupo/
+vl64h169:reunion_grupo david$ ls
+README.md   clases.py   otro.py     reunion.py
+vl64h169:reunion_grupo david$ git pull
+vl64h169:reunion_grupo david$ cat README.md
+ReunionGrupo
+============
+
+Éste un *repositorio* ejemplo para ver cómo funciona Git.
+
+- Una lista
+- Hola
+
+**Negritas**
+vl64h169:reunion_grupo david$ git pull
+^C
+vl64h169:reunion_grupo david$ git pull
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 1), reused 7 (delta 1)
+Unpacking objects: 100% (7/7), done.
+From https://github.com/dpsanders/ReunionGrupo
+   c869289..6d8ad0d  master     -> origin/master
+Updating c869289..6d8ad0d
+Fast-forward
+ README.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+vl64h169:reunion_grupo david$ open README.md
+vl64h169:reunion_grupo david$ subl README.md
+vl64h169:reunion_grupo david$ git fetch
+vl64h169:reunion_grupo david$ git status
+# On branch master
+nothing to commit, working directory clean
+vl64h169:reunion_grupo david$ git log
+commit 6d8ad0d86e80eb02683e269ae03154e8eadeb3d4
+Merge: c869289 1dfaf18
+Author: David Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 12:15:36 2014 -0500
+
+    Merge pull request #1 from computo-fc/docs
+
+    Docs
+
+commit 1dfaf188d5d4c590a4a78f25ab04c6456a632cec
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 12:04:14 2014 -0500
+
+    Mas docs
+
+commit 6c88ef5bcc7ecaa946db4f39808f2ffb60ab407a
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 12:02:24 2014 -0500
+
+    Cambie README para mayor explicacion
+
+commit c8692890e66de186a202c1bbce00afe20a9626e2
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:51:45 2014 -0500
+
+    Agregue README
+
+commit 5326e9b637a5b8d6489aeb068e40359d76c22a20
+Merge: 7375874 62415a3
+Author: David P. Sanders <dpsanders@gmail.com>
+Date:   Fri Apr 25 11:39:37 2014 -0500
+vl64h169:reunion_grupo david$

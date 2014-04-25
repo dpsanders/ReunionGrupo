@@ -7,3 +7,7 @@ ReunionGrupo
 - Hola
 
 **Negritas**
+
+Estamos en la reunión del grupo, aprendiendo sobre Git; por esto existe este repositorio.
+
+Mas documentacion.
